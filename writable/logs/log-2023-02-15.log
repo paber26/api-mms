@@ -1,0 +1,417 @@
+ERROR - 2023-02-15 03:44:20 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo failed: No such host is known.  in C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\xampp\\htdocs...', 174)
+#1 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('dbsentrareport', 'root', 'root', 'ci4', 3306, '', 0)
+#2 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1631): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', NULL, false)
+#5 C:\xampp\htdocs\api-mms\app\Controllers\Home.php(19): CodeIgniter\Database\BaseBuilder->countAll()
+#6 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api-mms\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo failed: No such host is known.  in C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('dbsentrareport', 'root', 'root', 'ci4', 3306, '', 0)
+#1 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1631): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', NULL, false)
+#4 C:\xampp\htdocs\api-mms\app\Controllers\Home.php(19): CodeIgniter\Database\BaseBuilder->countAll()
+#5 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\api-mms\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo failed: No such host is known.  in C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1631): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', NULL, false)
+#3 C:\xampp\htdocs\api-mms\app\Controllers\Home.php(19): CodeIgniter\Database\BaseBuilder->countAll()
+#4 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\api-mms\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2023-02-15 03:44:20 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo failed: No such host is known. 
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1631): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows` FROM `jobs_details`', null, false)
+ 3 APPPATH\Controllers\Home.php(19): CodeIgniter\Database\BaseBuilder->countAll()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-15 03:44:57 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo failed: No such host is known.  in C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\xampp\\htdocs...', 174)
+#1 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('dbsentrareport', 'root', 'root', 'ci4', 3306, '', 0)
+#2 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1631): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', NULL, false)
+#5 C:\xampp\htdocs\api-mms\app\Controllers\Home.php(20): CodeIgniter\Database\BaseBuilder->countAll()
+#6 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api-mms\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo failed: No such host is known.  in C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('dbsentrareport', 'root', 'root', 'ci4', 3306, '', 0)
+#1 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1631): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', NULL, false)
+#4 C:\xampp\htdocs\api-mms\app\Controllers\Home.php(20): CodeIgniter\Database\BaseBuilder->countAll()
+#5 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\api-mms\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo failed: No such host is known.  in C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1631): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', NULL, false)
+#3 C:\xampp\htdocs\api-mms\app\Controllers\Home.php(20): CodeIgniter\Database\BaseBuilder->countAll()
+#4 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\api-mms\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2023-02-15 03:44:57 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo failed: No such host is known. 
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1631): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows` FROM `jobs_details`', null, false)
+ 3 APPPATH\Controllers\Home.php(20): CodeIgniter\Database\BaseBuilder->countAll()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-15 03:44:58 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo failed: No such host is known.  in C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\xampp\\htdocs...', 174)
+#1 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('dbsentrareport', 'root', 'root', 'ci4', 3306, '', 0)
+#2 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1631): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', NULL, false)
+#5 C:\xampp\htdocs\api-mms\app\Controllers\Home.php(20): CodeIgniter\Database\BaseBuilder->countAll()
+#6 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api-mms\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo failed: No such host is known.  in C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('dbsentrareport', 'root', 'root', 'ci4', 3306, '', 0)
+#1 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1631): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', NULL, false)
+#4 C:\xampp\htdocs\api-mms\app\Controllers\Home.php(20): CodeIgniter\Database\BaseBuilder->countAll()
+#5 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\api-mms\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo failed: No such host is known.  in C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1631): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', NULL, false)
+#3 C:\xampp\htdocs\api-mms\app\Controllers\Home.php(20): CodeIgniter\Database\BaseBuilder->countAll()
+#4 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\api-mms\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2023-02-15 03:44:58 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo failed: No such host is known. 
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1631): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows` FROM `jobs_details`', null, false)
+ 3 APPPATH\Controllers\Home.php(20): CodeIgniter\Database\BaseBuilder->countAll()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-15 03:44:58 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo failed: No such host is known.  in C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\xampp\\htdocs...', 174)
+#1 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('dbsentrareport', 'root', 'root', 'ci4', 3306, '', 0)
+#2 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1631): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', NULL, false)
+#5 C:\xampp\htdocs\api-mms\app\Controllers\Home.php(20): CodeIgniter\Database\BaseBuilder->countAll()
+#6 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api-mms\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo failed: No such host is known.  in C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('dbsentrareport', 'root', 'root', 'ci4', 3306, '', 0)
+#1 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1631): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', NULL, false)
+#4 C:\xampp\htdocs\api-mms\app\Controllers\Home.php(20): CodeIgniter\Database\BaseBuilder->countAll()
+#5 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\api-mms\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo failed: No such host is known.  in C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1631): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', NULL, false)
+#3 C:\xampp\htdocs\api-mms\app\Controllers\Home.php(20): CodeIgniter\Database\BaseBuilder->countAll()
+#4 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\api-mms\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2023-02-15 03:44:58 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo failed: No such host is known. 
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1631): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows` FROM `jobs_details`', null, false)
+ 3 APPPATH\Controllers\Home.php(20): CodeIgniter\Database\BaseBuilder->countAll()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-15 03:44:58 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo failed: No such host is known.  in C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\xampp\\htdocs...', 174)
+#1 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('dbsentrareport', 'root', 'root', 'ci4', 3306, '', 0)
+#2 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1631): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', NULL, false)
+#5 C:\xampp\htdocs\api-mms\app\Controllers\Home.php(20): CodeIgniter\Database\BaseBuilder->countAll()
+#6 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api-mms\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo failed: No such host is known.  in C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('dbsentrareport', 'root', 'root', 'ci4', 3306, '', 0)
+#1 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1631): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', NULL, false)
+#4 C:\xampp\htdocs\api-mms\app\Controllers\Home.php(20): CodeIgniter\Database\BaseBuilder->countAll()
+#5 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\api-mms\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo failed: No such host is known.  in C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1631): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*)...', NULL, false)
+#3 C:\xampp\htdocs\api-mms\app\Controllers\Home.php(20): CodeIgniter\Database\BaseBuilder->countAll()
+#4 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\api-mms\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2023-02-15 03:44:58 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo failed: No such host is known. 
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1631): CodeIgniter\Database\BaseConnection->query('SELECT COUNT(*) AS `numrows` FROM `jobs_details`', null, false)
+ 3 APPPATH\Controllers\Home.php(20): CodeIgniter\Database\BaseBuilder->countAll()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-15 03:45:29 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo failed: No such host is known.  in C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\xampp\\htdocs...', 174)
+#1 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('dbsentrareport', 'root', 'root', 'ci4', 3306, '', 0)
+#2 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 C:\xampp\htdocs\api-mms\app\Controllers\Home.php(20): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api-mms\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo failed: No such host is known.  in C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('dbsentrareport', 'root', 'root', 'ci4', 3306, '', 0)
+#1 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\api-mms\app\Controllers\Home.php(20): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\api-mms\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo failed: No such host is known.  in C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\api-mms\app\Controllers\Home.php(20): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\api-mms\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2023-02-15 03:45:29 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo failed: No such host is known. 
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `jobs_details`', [], false)
+ 3 APPPATH\Controllers\Home.php(20): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-15 03:45:51 --> Error connecting to the database: ErrorException: mysqli::real_connect(): php_network_getaddresses: getaddrinfo failed: No such host is known.  in C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 [internal function]: CodeIgniter\Debug\Exceptions->errorHandler(2, 'mysqli::real_co...', 'C:\\xampp\\htdocs...', 174)
+#1 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('dbsentrareport', 'root', 'root', 'ci4', 3306, '', 0)
+#2 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#3 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#4 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#5 C:\xampp\htdocs\api-mms\app\Controllers\Home.php(20): CodeIgniter\Database\BaseBuilder->get()
+#6 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#7 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#8 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#9 C:\xampp\htdocs\api-mms\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#10 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#11 {main}
+
+Next mysqli_sql_exception: php_network_getaddresses: getaddrinfo failed: No such host is known.  in C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('dbsentrareport', 'root', 'root', 'ci4', 3306, '', 0)
+#1 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\api-mms\app\Controllers\Home.php(20): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\api-mms\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: php_network_getaddresses: getaddrinfo failed: No such host is known.  in C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\api-mms\app\Controllers\Home.php(20): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\api-mms\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2023-02-15 03:45:51 --> Unable to connect to the database.
+Main connection [MySQLi]: php_network_getaddresses: getaddrinfo failed: No such host is known. 
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `jobs_details`', [], false)
+ 3 APPPATH\Controllers\Home.php(20): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+ERROR - 2023-02-15 03:47:08 --> Error connecting to the database: mysqli_sql_exception: Access denied for user 'root'@'localhost' (using password: YES) in C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:174
+Stack trace:
+#0 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php(174): mysqli->real_connect('localhost', 'root', 'root', 'dbsentrareport', 3306, '', 0)
+#1 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\api-mms\app\Controllers\Home.php(20): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#6 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#7 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#8 C:\xampp\htdocs\api-mms\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#9 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#10 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: Access denied for user '****'@'localhost' (using password: YES) in C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\api-mms\app\Controllers\Home.php(20): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(934): App\Controllers\Home->index()
+#5 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+#6 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#7 C:\xampp\htdocs\api-mms\public\index.php(67): CodeIgniter\CodeIgniter->run()
+#8 C:\xampp\htdocs\api-mms\vendor\codeigniter4\framework\system\Commands\Server\rewrite.php(47): require_once('C:\\xampp\\htdocs...')
+#9 {main}
+CRITICAL - 2023-02-15 03:47:08 --> Unable to connect to the database.
+Main connection [MySQLi]: Access denied for user '****'@'localhost' (using password: YES)
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(573): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1602): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `jobs_details`', [], false)
+ 3 APPPATH\Controllers\Home.php(20): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 5 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 6 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 8 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
+CRITICAL - 2023-02-15 03:47:14 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 20480 bytes)
+in SYSTEMPATH\Database\MySQLi\Result.php on line 136.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-02-15 03:49:14 --> Allowed memory size of 536870912 bytes exhausted (tried to allocate 20480 bytes)
+in SYSTEMPATH\Database\MySQLi\Result.php on line 136.
+ 1 [internal function]: CodeIgniter\Debug\Exceptions->shutdownHandler()
+CRITICAL - 2023-02-15 03:58:24 --> Call to undefined method CodeIgniter\Database\MySQLi\Builder::set_content_type()
+in APPPATH\Controllers\Home.php on line 24.
+ 1 SYSTEMPATH\CodeIgniter.php(934): App\Controllers\Home->index()
+ 2 SYSTEMPATH\CodeIgniter.php(499): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Home))
+ 3 SYSTEMPATH\CodeIgniter.php(368): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ 5 SYSTEMPATH\Commands\Server\rewrite.php(47): require_once('FCPATH\\index.php')
